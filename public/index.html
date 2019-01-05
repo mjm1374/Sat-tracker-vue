@@ -25,7 +25,7 @@
     <div id="blog-post-demo">
         <div :style="{ fontSize: postFontSize + 'em' }">
         <blog-post
-          v-on:enlarge-text="postFontSize += 0.1" 
+          v-on:enlarge-text="onEnlargeText" 
           v-for="post in posts"
           v-bind:key="post.id"
           v-bind:post="post"

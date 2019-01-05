@@ -20,7 +20,12 @@ $(document).ready(function(){
         { id: 3, title: 'Why Vue is so fun' , content: '...content....' }
       ],
       postFontSize: 1
-    }
+    },
+    methods: {
+        onEnlargeText: function (enlargeAmount) {
+          this.postFontSize += enlargeAmount
+        }
+      }
   });
 
 
