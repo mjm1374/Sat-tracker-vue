@@ -1,5 +1,31 @@
 $(document).ready(function(){
     console.log('Here in Main');
+
+    var tester = function(){
+        console.log('xxx');
+
+        function y(){
+            console.log('yyy');
+        }
+    }
+
+    tester();
+
+ 
+
+    function initValidation()
+    {
+        // irrelevant code here
+        function validate(_block){
+            console.log( "test", _block );
+        }
+    
+        initValidation.validate = validate;
+    }
+
+    initValidation();
+    initValidation.validate( "hello" );
+
   });
 
   var app = new Vue({
@@ -10,6 +36,8 @@ $(document).ready(function(){
   });
 
   new Vue({ el: '#components-demo' });
+  new Vue({ el: '#custom-input' });
+  
 
   new Vue({
     el: '#blog-post-demo',
@@ -23,9 +51,24 @@ $(document).ready(function(){
     },
     methods: {
         onEnlargeText: function (enlargeAmount) {
-          this.postFontSize += enlargeAmount
+          this.postFontSize += enlargeAmount;
         }
       }
+  });
+
+
+
+  new Vue({
+    el: '#dynamic-component-demo',
+    data: {
+      currentTab: 'Home',
+      tabs: ['Home', 'Posts', 'Archive']
+    },
+    computed: {
+      currentTabComponent: function () {
+        return 'tab-' + this.currentTab.toLowerCase()
+      }
+    }
   });
 
 

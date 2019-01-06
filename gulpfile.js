@@ -55,7 +55,7 @@ gulp.task('watch', function () {
     gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch('src/js/*.js', ['js']);
     gulp.watch('src/vendor/*.js',['vendor']);
-    //gulp.watch('src/components/**/*.vue',['vueify']);
+    gulp.watch('src/components/**/*.vue',['vueify']);
 });
 
 gulp.task('default', ['sass', 'js', 'watch']);

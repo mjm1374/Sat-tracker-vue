@@ -6,20 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="favicon.ico">
     <title>Sat-Tracker-v2</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-   
-     
 
    
   </head>
@@ -46,7 +34,7 @@
         </div>
     </div>
     <div id="custom-input">
-      <!-- <custom-input v-model="searchText"></custom-input> -->
+      <custom-input v-model="searchText"></custom-input>
       <alert-box>
           Something bad happened.
         </alert-box>
@@ -66,13 +54,8 @@
           class="tab"
         ></component>
       </div>
-      <div class="map " id="map"></div>
-      
   
     <!-- built files will be auto injected -->
   </body>
   <script src="javascript/bundles.js"></script>
-  <script src="javascript/vendors.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnJkzn_D_jeEWtfJTgXHpYvhUpD7XK_8k&callback=initMap"
-  async defer></script>
 </html>

@@ -33,4 +33,36 @@
  
       </div>
     `
-  })
+  });
+
+
+
+  Vue.component('custom-input', {
+    props: ['value'],
+    template: `
+      <input
+        v-bind:value="value"
+        v-on:input="$emit('input', $event.target.value)"
+      >
+    `
+  });
+
+  Vue.component('alert-box', {
+    template: `
+      <div class="demo-alert-box">
+        <strong>Error!</strong>
+        <slot></slot>
+      </div>
+    `
+  });
+
+    Vue.component('tab-home', { 
+	    template: '<div>Home component</div>' 
+    });
+    Vue.component('tab-posts', { 
+        template: '<div>Posts component</div>' 
+    });
+    Vue.component('tab-archive', { 
+        template: '<div>Archive component</div>' 
+    });
+
