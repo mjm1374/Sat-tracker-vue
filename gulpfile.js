@@ -10,7 +10,7 @@ var browserify = require('gulp-browserify');
 var vueify = require('gulp-vueify2');
 
 gulp.task('sass', function () {
-    return gulp.src('src/scss/**/*.scss')
+    return gulp.src(['src/scss/*.scss','src/scss/**/*.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write())
@@ -52,7 +52,7 @@ gulp.task('vueify', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/scss/*.scss', ['sass']);
+    gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('src/js/*.js', ['js']);
     gulp.watch('src/vendor/*.js',['vendor']);
     gulp.watch('src/components/**/*.vue',['vueify']);

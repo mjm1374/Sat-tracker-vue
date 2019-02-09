@@ -35,15 +35,15 @@ $(document).ready(function(){
     }
   });
 
-  new Vue({ el: '#components-demo' });
-  new Vue({ el: '#custom-input' });
+//   new Vue({ el: '#components-demo' });
+//   new Vue({ el: '#custom-input' });
   
 
-  new Vue({
+  var blog = new Vue({
     el: '#blog-post-demo',
     data: {
       posts: [
-        { id: 1, title: 'My journey with Vue' , content: '...content....'},
+        { id: 1, title: 'My journey with Vue!' , content: '...content....'},
         { id: 2, title: 'Blogging with Vue' , content: '...content....' },
         { id: 3, title: 'Why Vue is so fun' , content: '...content....' }
       ],
@@ -57,22 +57,27 @@ $(document).ready(function(){
   });
 
 
+ 
+//   new Vue({
+//     el: '#dynamic-component-demo',
+//     data: {
+//       currentTab: 'Home',
+//       tabs: ['Home', 'Posts', 'Archive']
+//     },
+//     computed: {
+//       currentTabComponent: function () {
+//         return 'tab-' + this.currentTab.toLowerCase()
+//       }
+//     }
+//   });
 
-  new Vue({
-    el: '#dynamic-component-demo',
-    data: {
-      currentTab: 'Home',
-      tabs: ['Home', 'Posts', 'Archive']
-    },
-    computed: {
-      currentTabComponent: function () {
-        return 'tab-' + this.currentTab.toLowerCase()
-      }
-    }
-  });
 
+var x = 0;
+setInterval(function(){ 
+  x++;
+  app.message = "Loop" + x;
 
-
+}, 3000);
  
  
  

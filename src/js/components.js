@@ -3,7 +3,7 @@
     data: function () {
       return {
         count: 0
-      }
+      };
     },
     template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
   });
@@ -13,7 +13,7 @@
           return{
             markerid: 0,
             satName: 'unknown'
-          }
+          };
 
       },
       template: '<a class="markerClick" data-markerid="{{ markerid }}" href="javascript:satDetail({{ markerid }} ,0);">{{ satName}}</a>'
@@ -56,13 +56,13 @@
     `
   });
 
-    Vue.component('tab-home', { 
-	    template: '<div>Home component</div>' 
-    });
-    Vue.component('tab-posts', { 
-        template: '<div>Posts component</div>' 
-    });
-    Vue.component('tab-archive', { 
-        template: '<div>Archive component</div>' 
-    });
+  Vue.component('tab-home', { 
+    template: '<div>Home component</div>' 
+  });
+  Vue.component('tab-posts', { 
+    template: '<div>Posts component</div>' 
+  });
+  Vue.component('tab-archive', { 
+    template: '<div>Archive component</div>' 
+  });
 
