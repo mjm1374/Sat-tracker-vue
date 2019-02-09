@@ -24,7 +24,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src(['src/js/*.js','src/js/**/*.js'])
+    return gulp.src(['src/js/map.js','src/js/models.js','src/js/components.js','src/js/main.js','src/js/*.js','src/js/**/*.js'])
         .pipe(concat('bundles.js'))
         // .pipe(browserify({
         //     insertGlobals : true,

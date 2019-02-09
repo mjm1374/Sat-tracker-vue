@@ -13,7 +13,8 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/styles.css" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -92,12 +93,17 @@
           <div class="map col-sm-6">
             <div id="gmap"></div>
           </div>
-          <div class="tools col-sm-6"></div>
-      </div>
-      <div class="row footer">
-          <div class="col-sm-12"></div>
-      </div>
-  </div>
+          <div class="tools col-sm-6">
+            <div id="local"></div>
+            <p>Find satelites above you.</p>
+        
+        <label for="searchLat" class="lnglat latlabel">Lat:
+        <input class="searchbox" type="text" name="searchLat" id="searchLat" data-label="latitude"  value="40.7128" size="40" maxlength="40"  min="" max="" accept=""/></label><br />
+        
+        <label for="searchLng" class="lnglat lnglabel">Lng:
+        <input class="searchbox" type="text" name="searchLng" id="searchLng" data-label="longitude"  value="-74.0060" size="40" maxlength="40"  min="" max="" accept=""/></label><br />
+
+
 
 
     <div id="app">
@@ -139,13 +145,26 @@
           class="tab"
         ></component>
       </div>
-      <div class="map " id="map"></div>
+        
+
+          </div>
+      </div>
+      <div class="row footer">
+          <div class="col-sm-12">
+            <div class="copyright"></div>
+          </div>
+      </div>
+  </div>
+
+ 
       
   
     <!-- built files will be auto injected -->
   </body>
-  <script src="javascript/bundles.js"></script>
-  <script src="javascript/vendors.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnJkzn_D_jeEWtfJTgXHpYvhUpD7XK_8k&callback=initMap"
   async defer></script>
+  
+  <script src="javascript/vendors.js"></script>
+  <script src="javascript/bundles.js"></script>
+
 </html>
